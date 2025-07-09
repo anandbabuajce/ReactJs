@@ -1,0 +1,41 @@
+.Progressbarcontainer {
+
+    width: 300px;
+    margin: 20px;
+    margin-left: 600px;
+}
+
+.progressbartrack {
+    width: 100%;
+    border: 8px;
+    border: 2px solid black;
+    border-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+}
+ 
+.progressbarfill {
+    background-image: linear-gradient(to right, rgb(255, 255, 0), rgb(29, 251, 0));
+    height: 20px;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+ 
+}
+ 
+.progressbarfill.completed {
+    background-image: rgb(0, 255, 13);
+}
+ 
+ 
+.inputcontainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+ 
+}
+ 
+.percentageinput {
+    margin-top: 10px;
+    width: 60px;
+    padding: 5px;
+}
