@@ -1,0 +1,149 @@
+/* Reset some default styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #070707;
+  color: #333;
+}
+
+.app {
+  width: 90%;
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: rgb(172, 227, 70);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.mainHeading h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.subHeading h2 {
+  text-align: center;
+  font-size: 1.2em;
+  color: #040404;
+}
+
+.input {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.input input[type="text"],
+.input input[type="date"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  width: 200px;
+}
+
+.input input:focus {
+  border-color: #007bff;
+}
+
+.input i {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.2s;
+}
+
+.input i:hover {
+  background-color: #0056b3;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filters button:hover {
+  background-color: #c0c0c0;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  border-radius: 8px;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.todo:hover {
+  background-color: #f0f0f0;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.left p {
+  margin: 0;
+  word-break: break-word;
+}
+
+.right i {
+  margin-left: 10px;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s;
+}
+
+.right i:hover {
+  color: #e60023;
+}
+
+.todo input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+@media (max-width: 500px) {
+  .input input[type="text"],
+  .input input[type="date"] {
+    width: 100%;
+  }
+
+  .input {
+    flex-direction: column;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+  }
+}
