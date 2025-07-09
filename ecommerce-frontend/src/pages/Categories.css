@@ -1,0 +1,94 @@
+
+.categories-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.categories-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff9800; /* Bright orange for headline */
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+.categories-title:hover {
+  color: #694612;
+}
+
+/* ==================== */
+/* Grid layout for cards */
+/* ==================== */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ==================== */
+/* Category card styles */
+/* ==================== */
+.category-card {
+  background: #111;
+  border-radius: 18px;
+  border: 2px solid transparent;
+  padding: 32px 16px 28px 16px;
+  text-align: center;
+  cursor: pointer;
+  color: #ff9800;
+  font-weight: 500;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 16px rgba(255,152,0,0.08);
+  transition: 
+    transform 0.2s cubic-bezier(.4,2,.6,1),
+    box-shadow 0.2s cubic-bezier(.4,2,.6,1),
+    background 0.2s ease,
+    border-color 0.2s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.category-card div:first-child {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  transition: transform 0.2s ease;
+}
+
+.category-card:hover {
+  background: #222;
+  transform: translateY(-8px) scale(1.05);
+  border-color: #ff9800;
+  box-shadow: 0 8px 32px rgba(255,152,0,0.2);
+}
+
+.category-card:hover div:first-child {
+  transform: scale(1.2) rotate(8deg);
+}
+
+.category-card:active {
+  transform: scale(0.98);
+}
+
+/* ==================== */
+/* Responsive tweaks    */
+/* ==================== */
+@media (max-width: 600px) {
+  .categories-title {
+    font-size: 1.8rem;
+  }
+  .categories-grid {
+    gap: 16px;
+  }
+  .category-card {
+    padding: 24px 8px 20px 8px;
+    font-size: 1rem;
+  }
+  .category-card div:first-child {
+    font-size: 2.4rem;
+  }
+}
